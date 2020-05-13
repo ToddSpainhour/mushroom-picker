@@ -8,7 +8,7 @@ class MushroomCard extends React.Component {
 
     return (
       <div className="Mushroom col-3">
-  <img src="{mushroom.imgUrl}" className="card-img-top" alt="Mushroom Card" />
+  <img src={mushroom.imgUrl} className="card-img-top" alt="Mushroom Card" />
   <div className="card-body">
     <h5 className="card-title">{mushroom.name}</h5>
     <p className="card-text">{mushroom.description}</p>
