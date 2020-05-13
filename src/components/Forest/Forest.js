@@ -7,7 +7,7 @@ class Forest extends React.Component {
   render() {
     const { mushrooms } = this.props;
     const makeMushrooms = mushrooms.map((mushroom) => (
-      <MushroomCard mushroom={mushroom}/>
+      <MushroomCard mushroom={mushroom} key={mushroom.id}/>
     ));
 
     return (
