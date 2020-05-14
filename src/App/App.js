@@ -3,6 +3,8 @@ import './App.scss';
 
 import mushroomData from '../helpers/data/mushroomData';
 import Forest from '../components/Forest/Forest';
+import Basket from '../components/Basket/Basket';
+// import ContainerRow from '../components/ContainerRow/ContainerRow';
 
 class App extends React.Component {
   // outside the render() seen below is where you put anything that modifies state
@@ -25,7 +27,9 @@ render() {
     <div className="App">
       <h2 className='mushroom-title'>Mushroom Picker</h2>
       <button className="btn btn-dark">Pick a Mushroom</button>
+      {/* <ContainerRow /> */}
       <Forest mushrooms={mushrooms}/>
+      <Basket />
     </div>
   );
 }
