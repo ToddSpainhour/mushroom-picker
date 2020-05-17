@@ -184,8 +184,12 @@ const mushrooms = [
 
 const basket = [];
 
-const getbasket = () => basket;
+const getBasket = () => basket;
 
 const getMushrooms = () => mushrooms;
 
-export default { getMushrooms, getbasket };
+const pickAMushroom = () => {
+  console.error('You just clicked the "Pick A Mushroom" button!');
+};
+
+export default { getMushrooms, getBasket, pickAMushroom };
