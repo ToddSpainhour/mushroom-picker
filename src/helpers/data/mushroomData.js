@@ -190,10 +190,17 @@ const getMushrooms = () => mushrooms;
 
 const pickAMushroom = () => {
   const randomMushroom = mushrooms[Math.floor(Math.random() * mushrooms.length)];
-  console.error('the random mushroom you just picked is ', randomMushroom);
+  console.error('the randomMushroom you selected is ', randomMushroom);
+  if (randomMushroom.isPoisonous === true) {
+    console.error('that was a poisonous mushroom. Seek help!');
+  } if (randomMushroom.isDeadly === true) {
+    console.error('You just ate a deadly mushroom.');
+  } if (randomMushroom.isMagic === true) {
+    console.error('Buckle up. You just ate a magic mushroom.');
+  } else {
+    console.error('you just pick a regular old mushroom.');
+  }
   basket.push(randomMushroom);
-  console.error('the basket now contains this', getBasket());
-  // return randomMushroom;
 };
 
 export default { getMushrooms, getBasket, pickAMushroom };
