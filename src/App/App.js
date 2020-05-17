@@ -14,8 +14,9 @@ state = {
 
 componentDidMount() {
   const mushrooms = mushroomData.getMushrooms();
+  const basket = mushroomData.getBasket();
   // console.error('your mushrooms are...', mushrooms);
-  this.setState({ mushrooms });
+  this.setState({ mushrooms, basket });
 }
 
 // this is essentially saying this.pickAMushroom. Outside the render() don't used const
@@ -30,13 +31,13 @@ pickAMushroom = () => {
 
 render() {
   // inside the render() is for anything that modifies the UI
-  const { mushrooms } = this.state;
+  const { mushrooms, basket } = this.state;
 
   return (
     <div className="App">
       <h2 className='mushroom-title'>Mushroom Picker</h2>
       <Forest mushrooms={mushrooms} pickAMushroom={this.pickAMushroom}/>
-      <Basket />
+      <Basket basket={basket} mushrooms={mushrooms} pickAMushroom={this.pickAMushroom}/>
     </div>
   );
 }
