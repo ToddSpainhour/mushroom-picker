@@ -190,6 +190,8 @@ const getMushrooms = () => mushrooms;
 
 const pickAMushroom = () => {
   console.error('You just clicked the "Pick A Mushroom" button!');
+  const randomMushroon = mushrooms[Math.floor(Math.random() * mushrooms.length)];
+  console.error('the random mushroom you just picked is ', randomMushroon);
 };
 
 export default { getMushrooms, getBasket, pickAMushroom };
