@@ -14,8 +14,18 @@ state = {
 
 componentDidMount() {
   const mushrooms = mushroomData.getMushrooms();
-  console.error('your mushrooms are...', mushrooms);
+  // console.error('your mushrooms are...', mushrooms);
   this.setState({ mushrooms });
+}
+
+// this is essentially saying this.pickAMushroom. Outside the render() don't used const
+
+pickAMushroom = () => {
+  mushroomData.pickAMushroom();
+  const mushrooms = mushroomData.getMushrooms();
+  const basket = mushroomData.getBasket();
+  this.setState({ mushrooms }); // this resets the state aka reprints
+  this.setState({ basket }); // this resets the state aka reprints
 }
 
 render() {
@@ -25,7 +35,7 @@ render() {
   return (
     <div className="App">
       <h2 className='mushroom-title'>Mushroom Picker</h2>
-      <Forest mushrooms={mushrooms}/>
+      <Forest mushrooms={mushrooms} pickAMushroom={this.pickAMushroom}/>
       <Basket />
     </div>
   );
