@@ -17,7 +17,7 @@ class Forest extends React.Component {
     ));
 
     return (
-      <div><button className="btn btn-dark" onClick={this.pickAMushroomEvent}>Pick a Mushroom</button>
+      <div><button className="btn btn-dark pick-a-mushroom-btn" onClick={this.pickAMushroomEvent}>Pick a Mushroom</button>
       <div className="Forest d-flex flex-wrap">
         {makeMushrooms}
       </div>

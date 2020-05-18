@@ -11,10 +11,12 @@ class Basket extends React.Component {
     ));
 
     return (
-      < div className="Basket d-flex flex-wrap">
-      <h1>The basket</h1>
-      { makeMushroomBasket }
-    </div>
+      <div className="Basket">
+            <h2 className="basket-title">The Basket</h2>
+        <div className="Basket d-flex flex-wrap">
+            { makeMushroomBasket }
+        </div>
+      </div>
     );
   }
 }
