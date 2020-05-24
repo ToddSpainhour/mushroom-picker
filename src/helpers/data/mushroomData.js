@@ -184,37 +184,39 @@ const mushrooms = [
 
 const basket = [];
 
+
 const getBasket = () => basket;
 
+
 const getMushrooms = () => mushrooms;
+
 
 const youPickedAMagicMushroom = () => {
   console.error('you just ran your youPickedAMagicMushroom function');
   getMushrooms().forEach((mushroom) => {
     if (mushroom.isDeadly === false && mushroom.isPoisonous === false && mushroom.isMagic === false) {
-      console.error('this should show each mushroom, not just the magic one', mushroom);
       basket.push(mushroom);
     }
   });
 };
 
+
 const pickAMushroom = () => {
   const randomMushroom = mushrooms[Math.floor(Math.random() * mushrooms.length)];
   if (randomMushroom.isPoisonous === true) {
-    console.error('that was a poisonous mushroom. Seek help!');
+    alert('That was a poisonous mushroom. Two mushrooms have been removed from your basket.');
     basket.splice(0, 2);
   } else if (randomMushroom.isDeadly === true) {
-    console.error('You just ate a deadly mushroom.');
+    alert('You just picked a deadly mushroom. All other mushrooms have been removed from your basket.');
     basket.splice(0, basket.length);
   } else if (randomMushroom.isMagic === true) {
     youPickedAMagicMushroom();
-    console.error('You just picked a magic mushroom and you should see the youJustPickedAMagicMushroom function');
+    alert('You just picked a magic mushroom. You now have at least one of each regular type mushroom in your basket.');
   } else {
-    console.error('you just picked a regular old mushroom.');
+    alert('you just picked a regular old mushroom.');
     basket.push(randomMushroom);
   }
 };
 
-// basket.push(randomMushroom);
 
 export default { getMushrooms, getBasket, pickAMushroom };
