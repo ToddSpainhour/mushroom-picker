@@ -192,12 +192,18 @@ const getMushrooms = () => mushrooms;
 
 
 const youPickedAMagicMushroom = () => {
-  console.error('you just ran your youPickedAMagicMushroom function');
+  alert('You just picked a magic mushroom and won the game! One of each regular type mushroom has been added to your basket. Want to press your luck and keep going?.');
   getMushrooms().forEach((mushroom) => {
     if (mushroom.isDeadly === false && mushroom.isPoisonous === false && mushroom.isMagic === false) {
       basket.push(mushroom);
     }
   });
+};
+
+const didYouWin = () => {
+  if (basket.length > 15) {
+    alert('You won the game! Want to press your luck and keep going?');
+  }
 };
 
 
@@ -207,13 +213,12 @@ const pickAMushroom = () => {
     alert('That was a poisonous mushroom. Two mushrooms have been removed from your basket.');
     basket.splice(0, 2);
   } else if (randomMushroom.isDeadly === true) {
-    alert('You just picked a deadly mushroom. All other mushrooms have been removed from your basket.');
+    alert('Game over. You just picked a deadly mushroom. All other mushrooms have been removed from your basket. Want to try again?');
     basket.splice(0, basket.length);
   } else if (randomMushroom.isMagic === true) {
     youPickedAMagicMushroom();
-    alert('You just picked a magic mushroom. You now have at least one of each regular type mushroom in your basket.');
   } else {
-    alert('you just picked a regular old mushroom.');
+    alert('You just picked a regular mushroom.');
     basket.push(randomMushroom);
   }
 };
