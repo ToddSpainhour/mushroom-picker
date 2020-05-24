@@ -200,12 +200,6 @@ const youPickedAMagicMushroom = () => {
   });
 };
 
-const didYouWin = () => {
-  if (basket.length > 15) {
-    alert('You won the game! Want to press your luck and keep going?');
-  }
-};
-
 
 const pickAMushroom = () => {
   const randomMushroom = mushrooms[Math.floor(Math.random() * mushrooms.length)];
@@ -224,4 +218,8 @@ const pickAMushroom = () => {
 };
 
 
-export default { getMushrooms, getBasket, pickAMushroom };
+export default {
+  getMushrooms,
+  getBasket,
+  pickAMushroom,
+};
