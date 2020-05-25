@@ -39,9 +39,15 @@ render() {
   return (
     <div className="App">
       <h2 className='mushroom-title'>Mushroom Picker</h2>
-      <RulesToggle />
-      <Forest mushrooms={mushrooms} pickAMushroom={this.pickAMushroom} />
-      <Basket basket={basket} mushrooms={mushrooms} pickAMushroom={this.pickAMushroom} />
+          <RulesToggle />
+            <div className="row">
+              <div className="col-6">
+          <Forest mushrooms={mushrooms} pickAMushroom={this.pickAMushroom} />
+              </div>
+              <div div className="col-6">
+          <Basket basket={basket} mushrooms={mushrooms} pickAMushroom={this.pickAMushroom} />
+              </div>
+          </div>
     </div>
   );
 }
