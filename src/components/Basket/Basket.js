@@ -1,8 +1,16 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
+import mushroomShape from '../../helpers/propz/mushroomShape';
+
 import './Basket.scss';
 import MushroomCard from '../Mushroom/Mushroom';
 
 class Basket extends React.Component {
+  static propTypes = {
+    mushroom: PropTypes.arrayOf(mushroomShape.mushroomShape),
+  }
+
   render() {
     const { basket } = this.props;
     // const randomMushroom = this.props; // keep this nearby. we will need it soon
