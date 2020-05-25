@@ -1,7 +1,9 @@
+@import '../styles/variables';
+
 .App {
   display: block;
   text-align: center;
   .mushroom-title {
-    color: brown;
+    color: $pink;
   }
 }
