@@ -1,6 +1,8 @@
+@import '../../styles/variables';
+
 .Forest {
   display: block;
-  background-color: rgb(49, 61, 29);
+  background-color: $background;
   justify-content: space-evenly;
   // max-width: 65%;
 }

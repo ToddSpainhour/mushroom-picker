@@ -1,8 +1,10 @@
+@import '../../styles/variables'; 
+
 .Basket {
   display: block;
   text-align: center;
-  background-color: tan;
+  background-color: $background;
   .basket-title {
-    color: brown;
+    color: $yellow;
   }
 }
