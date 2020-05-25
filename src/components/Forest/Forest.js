@@ -1,9 +1,17 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
+import mushroomShape from '../../helpers/propz/mushroomShape';
+
 import './Forest.scss';
 
 import MushroomCard from '../Mushroom/Mushroom';
 
 class Forest extends React.Component {
+  static propTypes = {
+    mushrooms: PropTypes.arrayOf(mushroomShape.mushroomShape),
+  }
+
   pickAMushroomEvent = (e) => {
     const { pickAMushroom } = this.props;
     e.preventDefault();
