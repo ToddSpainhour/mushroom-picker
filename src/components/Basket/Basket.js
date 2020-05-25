@@ -13,9 +13,9 @@ class Basket extends React.Component {
 
   render() {
     const { basket } = this.props;
-    // const randomMushroom = this.props; // keep this nearby. we will need it soon
-    const makeMushroomBasket = basket.map((mushroom) => (
-      <MushroomCard mushroom={mushroom} key={mushroom.id}/>
+    // const randomMushroom = this.props;
+    const makeMushroomBasket = basket.map((mushroom, i) => (
+      <MushroomCard mushroom={mushroom} key={i + 1}/>
     ));
 
     return (
