@@ -28,6 +28,12 @@ pickAMushroom = () => {
   this.setState({ basket });
 }
 
+pickAMushroomEvent = (e) => {
+  // const { pickAMushroom } = this.props;
+  e.preventDefault();
+  this.pickAMushroom();
+}
+
 showTheRules = () => {
   mushroomData.showTheRules();
 }
@@ -39,13 +45,15 @@ render() {
   return (
     <div className="App">
       <h2 className='mushroom-title'>Mushroom Picker</h2>
+      <button className="btn btn-dark pick-a-mushroom-btn" onClick={this.pickAMushroomEvent}>Pick a Random Mushroom</button>
+
           <RulesToggle />
             <div className="row">
               <div className="col-6">
-          <Forest mushrooms={mushrooms} pickAMushroom={this.pickAMushroom} />
+          <Forest mushrooms={mushrooms} />
               </div>
-              <div div className="col-6">
-          <Basket basket={basket} mushrooms={mushrooms} pickAMushroom={this.pickAMushroom} />
+              <div className="col-6">
+          <Basket basket={basket} mushrooms={mushrooms} />
               </div>
           </div>
     </div>

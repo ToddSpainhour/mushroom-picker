@@ -12,11 +12,6 @@ class Forest extends React.Component {
     mushrooms: PropTypes.arrayOf(mushroomShape.mushroomShape),
   }
 
-  pickAMushroomEvent = (e) => {
-    const { pickAMushroom } = this.props;
-    e.preventDefault();
-    pickAMushroom();
-  }
 
   render() {
     const { mushrooms } = this.props; // get these props ready because I'll be using them
@@ -25,10 +20,8 @@ class Forest extends React.Component {
     ));
 
     return (
-      <div><button className="btn btn-dark pick-a-mushroom-btn" onClick={this.pickAMushroomEvent}>Pick a Random Mushroom</button>
       <div className="Forest d-flex flex-wrap">
         {makeMushrooms}
-      </div>
       </div>
     );
   }
