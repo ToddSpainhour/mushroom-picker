@@ -3,8 +3,11 @@
 .Basket {
   display: block;
   text-align: center;
-  background-color: $background;
+  background-color: $teal;
   .basket-title {
-    color: $yellow;
+    color: $navy;
+    border-bottom-style: solid;
+    border-bottom-color: $navy;
+    border-bottom-width: 3px;
   }
 }

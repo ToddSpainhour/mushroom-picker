@@ -3,7 +3,17 @@
 .App {
   display: block;
   text-align: center;
-  .mushroom-title {
-    color: $pink;
-  }
+    .mushroom-title {
+      color: $navy;
+      text-shadow: 2px 2px 5px $darkpink;
+    }
+    .pick-a-mushroom-btn {
+      background-color: $green;
+      color: black;
+      margin: 2rem;
+    }
+    .pick-a-mushroom-btn:hover {
+      background-color: $navy;
+      color: $darkpink;
+    }
 }

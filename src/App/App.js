@@ -44,7 +44,7 @@ render() {
 
   return (
     <div className="App">
-      <h2 className='mushroom-title'>Mushroom Picker</h2>
+      <h2 className='mushroom-title'>Magic Mushroom Picker</h2>
       <button className="btn btn-dark pick-a-mushroom-btn" onClick={this.pickAMushroomEvent}>Pick a Random Mushroom</button>
 
           <RulesToggle />

@@ -1,3 +1,30 @@
+@import '../../styles/variables';
+
 .RulesToggle {
   display: block;
 }
+
+.rules-toggle-btn {
+    // background-color: $green;
+    margin-bottom: 1rem;
+  }
+
+  .rules-div {
+    margin-bottom: 3rem;
+  }
+
+.btn-outline {
+  border-color: $navy;
+  color: $navy;
+}
+
+.btn-outline:hover {
+  background-color: $navy;
+  color: $darkpink;
+}
+
+h6 {
+  color: $navy;
+}
+
+

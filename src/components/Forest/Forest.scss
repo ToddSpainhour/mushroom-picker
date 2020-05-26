@@ -2,12 +2,14 @@
 
 .Forest {
   display: block;
-  background-color: $background;
+  background-color: $teal;
   justify-content: space-evenly;
-  // max-width: 65%;
+  .forest-title {
+    color: $navy;
+    border-bottom-style: solid;
+    border-bottom-color: $navy;
+    border-bottom-width: 3px;
+  }
 }
 
-.pick-a-mushroom-btn {
-  margin-top: 25px;
-  margin-bottom: 35px;
-}
+
