@@ -2,18 +2,29 @@
 
 .RulesToggle {
   display: block;
-  .rules-toggle-btn {
-    background-color: $green
-  }
 }
 
+.rules-toggle-btn {
+    // background-color: $green;
+    margin-bottom: 1rem;
+  }
+
+  .rules-div {
+    margin-bottom: 3rem;
+  }
+
 .btn-outline {
-  border-color: $purple;
-  color: $purple;
+  border-color: $navy;
+  color: $navy;
 }
 
 .btn-outline:hover {
-  color: $green;
+  background-color: $navy;
+  color: $darkpink;
+}
+
+h6 {
+  color: $navy;
 }
 
 

@@ -4,6 +4,12 @@
   display: block;
   background-color: $teal;
   justify-content: space-evenly;
-  // max-width: 65%;
+  .forest-title {
+    color: $navy;
+    border-bottom-style: solid;
+    border-bottom-color: $navy;
+    border-bottom-width: 3px;
+  }
 }
+
 
