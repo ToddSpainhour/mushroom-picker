@@ -3,13 +3,14 @@
 .MushroomCard {
   display: block;
   background-color: $navy;
-  border-style: solid;
-  border-width: 3px;
+  // border-style: solid;
+  // border-width: 3px;
   // border-color: $darkpink;
-  // border-radius: 10px;
+  border-radius: 25px;
   margin: 1rem;
 
     img {
+      padding-top: 5%;
       max-height: 250px;
     }
 }
