@@ -1,7 +1,7 @@
 # Magic Mushroom Picker
 
 ## Screenshots
-![Project Screenshot](/Screenshots/mushroom-picker-screenshot-1.jpg)
+![Project Screenshot](https://raw.githubusercontent.com/ToddSpainhour/mushroom-picker/master/Screenshots/mushroom-picker-screenshot-1.JPG)
 
 ## How To Run
 1. Clone down this repo.
