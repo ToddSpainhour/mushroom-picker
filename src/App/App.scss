@@ -1,16 +1,22 @@
 @import '../styles/variables';
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
+
 
 .App {
   display: block;
   text-align: center;
     .mushroom-title {
+      font-family: 'Molle', cursive;
       color: $navy;
       text-shadow: 2px 2px 5px $darkpink;
+      font-size: 5rem;
+      margin-top: 2rem
     }
     .pick-a-mushroom-btn {
       background-color: $green;
       color: black;
-      margin: 2rem;
+      margin-top: 1rem;
+      margin-bottom: .5rem
     }
     .pick-a-mushroom-btn:hover {
       background-color: $navy;
