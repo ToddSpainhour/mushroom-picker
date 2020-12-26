@@ -5,12 +5,10 @@ import Basket from '../Basket/Basket';
 
 class ContainerRow extends React.Component {
   render() {
-    console.error('inside your containerRow component');
-
     return (
-    <div className="ContainerRow">
-    <Forest />
-    <Basket />
+    <div className="ContainerRow col-12">
+      <Forest />
+      <Basket />
     </div>
     );
   }

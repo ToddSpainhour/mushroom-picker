@@ -7,7 +7,6 @@ import Basket from '../components/Basket/Basket';
 import RulesToggle from '../components/RulesToggle/RulesToggle';
 
 class App extends React.Component {
-  // outside the render() seen below is where you put anything that modifies state
 state = {
   mushrooms: [],
   basket: [],
@@ -29,7 +28,6 @@ pickAMushroom = () => {
 }
 
 pickAMushroomEvent = (e) => {
-  // const { pickAMushroom } = this.props;
   e.preventDefault();
   this.pickAMushroom();
 }
@@ -43,19 +41,21 @@ render() {
   const { mushrooms, basket } = this.state;
 
   return (
-    <div className="App">
-      <h2 className='mushroom-title'>Magic Mushroom Picker</h2>
-      <button className="btn btn-dark pick-a-mushroom-btn" onClick={this.pickAMushroomEvent}>Pick a Random Mushroom</button>
+    <div className="App col-12">
+      <h1 className='mushroom-title'>Magic Mushroom Picker</h1>
+      <div className="pick-a-mushroom-btn-container">
+        <button className="btn btn-dark pick-a-mushroom-btn col-md-4 col-sm-6" onClick={this.pickAMushroomEvent}>Pick a Random Mushroom</button>
+      </div>
 
           <RulesToggle />
-            <div className="row">
-              <div className="col-6">
-          <Forest mushrooms={mushrooms} />
+            <div className="col-12 forest-basket-container">
+              <div className="col-6 forest-container">
+                <Forest mushrooms={mushrooms} />
               </div>
-              <div className="col-6">
-          <Basket basket={basket} mushrooms={mushrooms} />
+              <div className="col-6 basket-container">
+                <Basket basket={basket} mushrooms={mushrooms} />
               </div>
-          </div>
+            </div>
     </div>
   );
 }
