@@ -3,23 +3,23 @@
 .MushroomCard {
   display: block;
   background-color: $navy;
-  // border-style: solid;
-  // border-width: 3px;
-  // border-color: $darkpink;
   border-radius: 25px;
   margin: 1rem;
 
-    img {
-      padding-top: 5%;
-      max-height: 250px;
-    }
-}
-
-
-.mushroom-name {
-  color: $green;
+  .mushroom-name {
+    width: auto;
+    word-wrap: break-word;
+    color: $green;
   }
 
   .mushroom-discription {
-  color: $darkpink;
+    color: $darkpink;
   }
+
+  img {
+    padding-top: 5%;
+    max-height: 250px;
+  }
+}
+
+
